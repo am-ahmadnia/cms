@@ -11,8 +11,8 @@
         $user_image_temp = $_FILES['image']['tmp_name'];
         move_uploaded_file($user_image_temp,"images/$user_image");
 
-        $query = "INSERT INTO users(username, user_password, user_firstname, user_lastname, user_email, user_role, user_date) ";
-        $query .= "VALUES('$username', '$user_password', '$user_firstname', '$user_lastname', '$user_email', '$user_role', now()) ";
+        $query = "INSERT INTO users(username, user_password, user_firstname, user_lastname, user_email, user_role, user_date, user_image) ";
+        $query .= "VALUES('$username', '$user_password', '$user_firstname', '$user_lastname', '$user_email', '$user_role', now(), '$user_image') ";
         $add_user_query = mysqli_query($connection,$query);
         if(!$add_user_query){
             die("ADDING USER FAILED".mysqli_error($connection));
@@ -30,7 +30,7 @@
         <label for="title">Firstname</label>
         <input class="form-control" type="text" name="firstname" >
     </div>
-    ffff    
+    
     <div class="form-group">
         <label for="title">Lastname</label>
         <input class="form-control" type="text" name="lastname" >
@@ -54,7 +54,7 @@
 
     <div class="form-group">
         <label for="image">Profile Picture</label>
-        <input class="" type="file" name="image">
+        <input class="form-control" type="file" name="image">
     </div>
 
     <div class="form-group">

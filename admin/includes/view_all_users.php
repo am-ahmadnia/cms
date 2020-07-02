@@ -39,7 +39,7 @@
                 echo "<td>$user_firstname</td>";
                 echo "<td>$user_lastname</td>";
                 echo "<td>$user_email</td>";
-                echo "<td>$user_image</td>";
+                echo "<td><img width='50px' src='images/$user_image'></td>";
                 echo "<td>$user_role</td>";
                 // echo "<td><img class='img-responsive' style='width:50px;' src='../images/$post_image' alt='No Picture'></td>";
                 echo "<td>$user_date</td>";
