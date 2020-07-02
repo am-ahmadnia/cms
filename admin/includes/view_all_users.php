@@ -1,4 +1,3 @@
-<!-- GIT SHIT -->
 <h1 class="display-1">
     Users
 </h1>
@@ -44,8 +43,8 @@
                 echo "<td>$user_role</td>";
                 // echo "<td><img class='img-responsive' style='width:50px;' src='../images/$post_image' alt='No Picture'></td>";
                 echo "<td>$user_date</td>";
-                // echo "<td><a  class='text-info' href='posts.php?source=edit_post&p_id=$post_id'>Edit</a></td>";
-                echo "<td><a class='text-danger' href='users.php?delete_user=$user_id'>Delete</a></td>";
+                echo "<td><a class='text-danger' href='users.php?source=edit_user&user_id=$user_id'>Edit</a></td>";
+                echo "<td><a class='text-danger' href='users.php?source=delete_user=&user_id=$user_id'>Delete</a></td>";
                 echo "</tr>";
                 
             }
