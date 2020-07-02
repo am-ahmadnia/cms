@@ -15,7 +15,9 @@
         $user_firstname = $row['user_firstname'];
         $user_lastname = $row['user_lastname'];
         $user_email = $row['user_email'];
+        $user_image = $row['user_image'];
         $user_role = $row['user_role'];
+        $user_image = $row['user_image'];
         
     }
     
@@ -27,6 +29,16 @@
         $user_lastname = $_POST['lastname'];
         $user_email = $_POST['email'];
         $user_role = $_POST['role'];
+        $user_image = $_FILES['image']['name'];
+        $user_image_temp = $_FILES['image']['tmp_name'];
+        move_uploaded_file($user_image_temp,"../images/$user_image");
+        if(empty($user_image)){
+            $query = "SELECT * FROM users WHERE user_id = $the_user_id";
+            $select_image = mysqli_query($connection,$query);
+            while($row = mysqli_fetch_assoc($select_image)){
+                $user_image = $row['user_image'];
+            }
+        }
         
         $query = "UPDATE users SET ";
         $query .= "user_firstname = '$user_firstname', ";
@@ -34,9 +46,9 @@
         $query .= "username = '$username', ";
         $query .= "user_password = '$user_password', ";
         $query .= "user_email = '$user_email', ";
+        $query .= "user_image = '$user_image', ";
         $query .= "user_role = '$user_role' ";
         $query .= "WHERE user_id = '$the_user_id'";
-
         $edit_user_query = mysqli_query($connection,$query);
         if(!$edit_user_query){
             die ("fuccckckckckcckkckckc");
@@ -59,6 +71,14 @@
     <div class="form-group">
         <label for="title">Lastname</label>
         <input value="<?php echo $user_lastname; ?>" class="form-control" type="text" name="lastname">
+    </div>
+    
+    <div class="form-group">
+        <label for="image" style="display: block;">Profile Picture</label>
+        <img class='img-responsive' style='width:50px;' src='' alt='No Picture'>
+        <br><br>
+        <input class="" type="file" name="image">
+        
     </div>
     
     <div class="form-group">

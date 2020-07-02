@@ -9,7 +9,7 @@
         $user_role = $_POST['role'];
         $user_image = $_FILES['image']['name'];
         $user_image_temp = $_FILES['image']['tmp_name'];
-        move_uploaded_file($user_image_temp,"images/$user_image");
+        move_uploaded_file($user_image_temp,"images/profile_pictures/$user_image");
 
         $query = "INSERT INTO users(username, user_password, user_firstname, user_lastname, user_email, user_role, user_date, user_image) ";
         $query .= "VALUES('$username', '$user_password', '$user_firstname', '$user_lastname', '$user_email', '$user_role', now(), '$user_image') ";
