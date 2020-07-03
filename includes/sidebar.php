@@ -3,10 +3,10 @@
 
                
 
-                <!-- Blog Search Well -->
+                <!-- LOGIN -->
                 <div class="well">
-                    <h4>Blog Search</h4>
-                    <form action="search.php" method="post">
+                    <h4>Login</h4>
+                    <form action="includes/login.php" method="post">
                     <div class="input-group">
                         <input name="search" type="text" class="form-control">
                         <span class="input-group-btn">
@@ -17,6 +17,7 @@
                     </div>
                     </form> <!-- serach form-->
                 </div>
+
 
                 <!-- Blog Categories Well -->
                 <div class="well">
