@@ -17,7 +17,7 @@
         if(!$add_user_query){
             die("ADDING USER FAILED".mysqli_error($connection));
         }else{
-            echo "<h1 class='text-danger'>User Added</h1>";
+            header("location: users.php?user_added");
         }
     }
 ?>

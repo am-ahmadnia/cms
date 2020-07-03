@@ -11,7 +11,11 @@
         <div id="page-wrapper">
 
             <div class="container-fluid">
-
+                <?php
+                    if(isset($_GET['user_added'])){
+                        echo "<h3 class='text-danger'>User Added</h3>";
+                    }
+                ?>   
                 <!-- Page Heading -->
                 <div class="col-lg-12">
 
