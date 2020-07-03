@@ -31,7 +31,7 @@
         $user_role = $_POST['role'];
         $user_image = $_FILES['image']['name'];
         $user_image_temp = $_FILES['image']['tmp_name'];
-        move_uploaded_file($user_image_temp,"../images/$user_image");
+        move_uploaded_file($user_image_temp,"images/profile_pics/$user_image");
         if(empty($user_image)){
             $query = "SELECT * FROM users WHERE user_id = $the_user_id";
             $select_image = mysqli_query($connection,$query);
@@ -53,7 +53,7 @@
         if(!$edit_user_query){
             die ("fuccckckckckcckkckckc");
         }else{
-            echo "<h3 class='text-danger'>User Edited</h3>";            
+            header("location: users.php");
         }
     }
 
@@ -75,7 +75,7 @@
     
     <div class="form-group">
         <label for="image" style="display: block;">Profile Picture</label>
-        <img class='img-responsive' style='width:50px;' src='' alt='No Picture'>
+        <img class='img-responsive' style='width:50px;' src='images/profile_pics/<?php echo $user_image ?>' alt='No Picture'>
         <br><br>
         <input class="" type="file" name="image">
         

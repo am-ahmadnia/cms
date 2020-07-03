@@ -41,8 +41,8 @@
                 echo "<td>$user_lastname</td>";
                 echo "<td>$user_email</td>";
                 // echo "<td><img width='50px' src='images/$user_image'></td>";
-                echo "<td>$user_role</td>";
                 echo "<td><img class='img-responsive' style='width:50px;' src='images/profile_pics/$user_image' alt='No Picture'></td>";
+                echo "<td>$user_role</td>";
                 echo "<td>$user_date</td>";
                 echo "<td><a class='text-danger' href='users.php?source=edit_user&user_id=$user_id'>Edit</a></td>";
                 echo "<td><a class='text-danger' href='users.php?delete_user=$user_id'>Delete</a></td>";
