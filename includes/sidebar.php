@@ -26,7 +26,7 @@
                     <div class="input-group">
                         <input name="password" type="password" class="form-control" placeholder="Password...">
                         <span class="input-group-btn">
-                            <button name="submit" class="btn btn-primary btn-default" type="submit">Submit</button>
+                            <button name="submit_login" class="btn btn-primary btn-default" type="submit">Submit</button>
                         </span>
                     </div>
                     </form> <!-- serach form-->

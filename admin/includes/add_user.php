@@ -13,6 +13,7 @@
 
         $query = "INSERT INTO users(username, user_password, user_firstname, user_lastname, user_email, user_role, user_date, user_image) ";
         $query .= "VALUES('$username', '$user_password', '$user_firstname', '$user_lastname', '$user_email', '$user_role', now(), '$user_image') ";
+        echo $query;
         $add_user_query = mysqli_query($connection,$query);
         if(!$add_user_query){
             die("ADDING USER FAILED".mysqli_error($connection));

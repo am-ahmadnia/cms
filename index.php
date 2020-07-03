@@ -8,9 +8,16 @@
 
     <!-- Page Content -->
     <div class="container">
-        <h1 class="page-header text-danger">
+        <h1 class="page-header">
             Home
         </h1>
+        
+        <?php
+            if(isset($_GET['login_failed'])){
+                echo "<h5 class='text-danger'>Entered Username or Password is incorrect</h5>";
+            }
+        ?>
+        
         <div class="row">
 
             <!-- Blog Entries Column -->
