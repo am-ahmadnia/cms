@@ -18,6 +18,11 @@
                 <!-- LOGIN -->
                 <div class="well">
                     <h4>Login</h4>
+                    <?php
+                        if(isset($_GET['login_failed'])){
+                            echo "<h5 class='text-danger'>Entered Username or Password is incorrect</h5>";
+                        }
+                    ?>
                     <form action="includes/login.php" method="post">
                     <div class="form-group">
                         <input name="username" type="text" class="form-control" placeholder="Username...">
@@ -29,7 +34,7 @@
                             <button name="submit_login" class="btn btn-primary btn-default" type="submit">Submit</button>
                         </span>
                     </div>
-                    </form> <!-- serach form-->
+                    </form> <!-- search form-->
                 </div>
 
 

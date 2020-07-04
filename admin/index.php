@@ -1,5 +1,5 @@
 <?php
-    include "includes/admin_header.php"
+    include "includes/admin_header.php";
 ?>
     <div id="wrapper">
         
@@ -15,7 +15,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Welcome to admin
+                            Welcome to admin 
+                            <?php 
+                               echo $_SESSION['firstname'];
+                            ?>
                             
                         </h1>
                     </div>

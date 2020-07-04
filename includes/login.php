@@ -1,4 +1,5 @@
 <?php include "db.php" ?>
+<?php session_start() ?>
 <?php
     if(isset($_POST['submit_login'])){
         $username = $_POST['username'];
@@ -28,11 +29,14 @@
         if($username !== $the_user_name && $password !== $user_password){
             header("location: ../index.php?login_failed");
         }else if($username == $the_user_name && $password == $user_password){
-            header("location: ../index.php?logged_in");
+            $_SESSION['username'] = $the_user_name;
+            $_SESSION['password'] = $user_password;
+            $_SESSION['firstname'] = $user_firstname;
+            $_SESSION['lastname'] = $user_lastname;
+            $_SESSION['role'] = $user_role;
+            // $_SESSION[''] = $user_
+            header("location: ../admin/");
         }
-        // if($username !== $db_username && $password !== $db_user_password){
-        //     header("location: ../admin");
-        // }
     }
     
 ?>

@@ -12,11 +12,6 @@
             Home
         </h1>
         
-        <?php
-            if(isset($_GET['login_failed'])){
-                echo "<h5 class='text-danger'>Entered Username or Password is incorrect</h5>";
-            }
-        ?>
         
         <div class="row">
 
