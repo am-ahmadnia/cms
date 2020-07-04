@@ -2,6 +2,13 @@
 <?php ob_start(); ?>
 <?php include "../includes/db.php" ?>
 <?php include "functions.php" ?>
+<?php
+// WHEN YOU LOGOUT, ALL THE SESSIONS WOULD BE GONE
+    if(!isset($_SESSION['role'])){
+        header('location: ../index.php');
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

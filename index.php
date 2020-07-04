@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "includes/db.php";
     include "includes/header.php";
 ?>
@@ -17,6 +18,12 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
+                <?php
+                    if(isset($_GET['logged_in'])){
+                        
+                        echo "<h3 class='text-danger'>Welcome {$_SESSION['firstname']}</h3>";
+                    }
+                ?>
                 <?php
                     if(isset($_GET['p_id'])){
                         $the_post_id = $_GET['p_id'];

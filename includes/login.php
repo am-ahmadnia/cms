@@ -24,18 +24,17 @@
             $user_image = $row['user_image'];
             $user_role = $row['user_role'];
         }
-        
-        
-        if($username !== $the_user_name && $password !== $user_password){
-            header("location: ../index.php?login_failed");
-        }else if($username == $the_user_name && $password == $user_password){
+
+        if($username === $the_user_name && $password === $user_password){
             $_SESSION['username'] = $the_user_name;
             $_SESSION['password'] = $user_password;
             $_SESSION['firstname'] = $user_firstname;
             $_SESSION['lastname'] = $user_lastname;
             $_SESSION['role'] = $user_role;
-            // $_SESSION[''] = $user_
+
             header("location: ../admin/");
+        }else {
+            header("location: ../index.php");
         }
     }
     
