@@ -108,7 +108,7 @@
         </div> -->
 
         <div class="form-group">
-            <input class="btn btn-primary" type="submit" name="update_profile" value="Update Post">
+            <input class="btn btn-primary" type="submit" name="update_profile" value="Update Profile">
         </div>
         
     </form>
