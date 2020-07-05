@@ -3,6 +3,12 @@
 <?php include "../includes/db.php" ?>
 <?php include "functions.php" ?>
 <?php
+    if(isset($_SESSION['role'])){
+        if($_SESSION['role'] !== 'admin'){
+            header("location: ../index.php?logged_in");
+        }
+    }
+
 // WHEN YOU LOGOUT, ALL THE SESSIONS WOULD BE GONE
     if(!isset($_SESSION['role'])){
         header('location: ../index.php');

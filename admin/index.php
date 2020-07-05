@@ -1,3 +1,6 @@
+<?php 
+    // ------------------------------------ADMIN INDEX---------------------------------------------------------------------
+?>
 <?php
     include "includes/admin_header.php";
 ?>
@@ -17,7 +20,14 @@
                         <h1 class="page-header">
                             Welcome to admin 
                             <?php 
-                               echo $_SESSION['firstname'];
+                               echo $_SESSION['firstname'].'<br>';
+
+                               if (isset($_GET['profile_updated'])) {
+                                    echo "<small class='text-danger'>Profile Updated</small>";
+                                }else if(isset($_GET['logged_in'])){
+                                    echo "<small class='text-danger'>WELCOME TO SICKO MODE!</small>";
+                            
+                               }
                             ?>
                             
                         </h1>
