@@ -97,7 +97,17 @@
 
     <div class="form-group">
         <label for="status">Post Status</label>
-        <input value="<?php echo $post_status; ?>" class="form-control" type="text" name="status">
+        <select name="status" class="form-control" id="">
+            <?php
+                if($post_status == 'published'){
+                    echo "<option value='published'>Published</option>";
+                    echo "<option value='draft'>Draft</option>";
+                }else{
+                    echo "<option value='draft'>Draft</option>";
+                    echo "<option value='published'>Published</option>";
+                }
+            ?>
+        </select>
     </div>
     
     
@@ -116,7 +126,7 @@
 
     <div class="form-group">
         <label for="content">Post Content</label>
-        <textarea class="form-control" name="content" id="" cols="30" rows="10"><?php echo $post_content; ?></textarea>
+        <textarea class="form-control" name="content" id="body" cols="30" rows="10"><?php echo $post_content; ?></textarea>
     </div>
     
     <div class="form-group">

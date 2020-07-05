@@ -43,8 +43,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         
+    
     <!-- GOOGLE CHARTS SCRIPT -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- CKEDITOR -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
     </head>
     
 <body>
