@@ -1,7 +1,6 @@
 <?php
-    session_start();
-    include "includes/db.php";
     include "includes/header.php";
+    include "includes/db.php";
 ?>
     <!-- Navigation -->
 <?php include "includes/navigation.php"; ?>

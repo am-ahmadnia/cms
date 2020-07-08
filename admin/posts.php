@@ -2,7 +2,7 @@
     include "includes/admin_header.php";
 ?>
     <div id="wrapper">
-
+    <script src="js/script.js"></script>
         <!-- Navigation -->
         <?php include "includes/admin_navigation.php" ?>
 
@@ -11,7 +11,7 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <div class="col-lg-12">
+                <div class="col-lg-12"  style="padding: 0px;">
                     
                 <?php
                     if(isset($_GET['source'])){
